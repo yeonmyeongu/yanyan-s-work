@@ -1,0 +1,549 @@
+@charset "UTF-8";
+
+/* Resume content follows the portfolio's existing black, paper and grass palette. */
+.about-content,
+.resume-content,
+.entry-meta,
+.capability-heading,
+.contact-links,
+.detail-info {
+  min-width: 0;
+}
+
+.profile-name {
+  margin: 0 0 30px;
+  color: var(--grass);
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: .025em;
+}
+
+.profile-name > span { margin-left: 14px; color: var(--muted); }
+
+.about-notes {
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.about-notes p[lang="en"] {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.resume-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
+  gap: 40px;
+  padding: 100px 36px;
+  border-top: 1px solid var(--line);
+}
+
+.resume-section .eyebrow {
+  line-height: 1.7;
+}
+
+.resume-section h3,
+.resume-section h4,
+.resume-section p,
+.resume-section li,
+.detail-info h2,
+.detail-facts dd,
+.contact-links a {
+  overflow-wrap: anywhere;
+}
+
+.entry-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.entry-role {
+  color: var(--grass);
+}
+
+.experience-entry + .experience-entry,
+.research-entry + .research-entry {
+  margin-top: 48px;
+  padding-top: 38px;
+  border-top: 1px solid var(--line);
+}
+
+.resume-content h3 {
+  margin: 18px 0 18px;
+  font-size: clamp(24px, 2.2vw, 36px);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.resume-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.resume-content p + p {
+  margin-top: 12px;
+}
+
+.project-list,
+.campus-details {
+  margin-top: 25px;
+}
+
+.project-list summary,
+.campus-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 44px;
+  padding: 10px 0;
+  color: var(--paper);
+  font-size: 13px;
+  line-height: 1.7;
+  list-style: none;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.project-list summary::-webkit-details-marker,
+.campus-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-list summary::after,
+.campus-details summary::after {
+  content: "+";
+  flex: 0 0 20px;
+  color: var(--grass);
+  font-size: 20px;
+  text-align: center;
+}
+
+.project-list[open] summary::after,
+.campus-details[open] summary::after {
+  content: "−";
+}
+
+.project-list summary:hover,
+.campus-details summary:hover {
+  color: var(--grass);
+}
+
+.project-list summary:focus-visible,
+.campus-details summary:focus-visible {
+  outline: 2px solid var(--grass);
+  outline-offset: 5px;
+}
+
+.project-list ul,
+.education-honors ul {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-list li {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.project-list strong,
+.project-list li > span,
+.project-list li > a > span {
+  display: block;
+}
+
+.project-list strong {
+  color: var(--paper);
+  font-weight: 400;
+}
+
+.project-list li > span,
+.project-list li > a > span {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.capability-list > article + article {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.capability-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin-bottom: 16px;
+}
+
+.capability-heading h3 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.capability-heading > span {
+  color: var(--grass);
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.education-main .education-courses {
+  margin-top: 20px;
+}
+
+.education-honors {
+  margin-top: 34px;
+}
+
+.education-honors h4,
+.campus-details h4 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.education-honors li {
+  margin: 8px 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.education-honors strong { font-weight: 400; color: var(--paper); text-align: right; }
+.project-list li > a { display: block; }
+.project-list li > a:hover strong { color: var(--grass); }
+
+.campus-details {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.campus-details article {
+  padding-top: 24px;
+}
+
+.campus-details article + article {
+  margin-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.campus-details time {
+  display: block;
+  margin: -6px 0 14px;
+  color: var(--grass);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: -11px;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: color 180ms ease;
+}
+
+.contact-links a:hover,
+a.contact-display:hover {
+  color: var(--grass);
+}
+
+.contact-links > span { color: var(--muted); font-size: 12px; line-height: 1.8; margin-top: 8px; }
+
+a.contact-display {
+  min-height: 44px;
+  transition: color 180ms ease;
+}
+
+.cover-note {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  right: 15px;
+  padding: 5px 8px;
+  color: var(--paper);
+  background: rgba(0, 0, 0, .72);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .02em;
+  pointer-events: none;
+}
+
+.project-caption {
+  gap: 18px;
+}
+
+.project-caption > span {
+  min-width: 0;
+  font-size: 22px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.project-caption svg {
+  flex-shrink: 0;
+}
+
+#project-dialog {
+  overflow-y: auto;
+}
+
+.detail-layout {
+  height: auto;
+  min-height: calc(100% - 70px);
+  align-items: start;
+}
+
+.detail-visual {
+  height: calc(100svh - 110px);
+}
+
+.detail-info {
+  padding: 20px 0 10px;
+}
+
+.detail-info h2 {
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.4;
+  margin: 16px 0 24px;
+}
+
+.detail-info > p,
+.detail-info > p:first-child {
+  font-size: 13px;
+}
+
+.detail-facts {
+  margin: 28px 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.detail-facts > div {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 18px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.detail-facts dt {
+  color: var(--muted);
+}
+
+.detail-facts dd {
+  margin: 0;
+  color: var(--paper);
+}
+
+.detail-info .detail-image-note {
+  max-width: 100%;
+  color: var(--grass);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.detail-controls {
+  margin-top: 35px;
+  max-width: none;
+}
+
+@media (max-width: 1000px) {
+  .resume-section {
+    grid-template-columns: minmax(0, .6fr) minmax(0, 1.4fr);
+    padding: 80px 25px;
+  }
+
+  .about-notes {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .project-caption {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .about-content {
+    padding-left: 0;
+  }
+
+  .profile-name {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .about-statement {
+    font-size: 42px;
+    line-height: 1.45;
+    letter-spacing: -.045em;
+  }
+
+  .about-notes,
+  .about-notes p + p,
+  .about-notes p[lang="en"] {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .resume-section {
+    display: block;
+    padding: 65px 20px;
+  }
+
+  .resume-section .eyebrow {
+    margin: 0 0 35px;
+    font-size: 13px;
+  }
+
+  .resume-section .eyebrow span {
+    font-size: 13px;
+  }
+
+  .resume-content h3 {
+    margin: 16px 0;
+    font-size: 25px;
+    line-height: 1.55;
+  }
+
+  .resume-content p,
+  .education-honors li {
+    font-size: 15px;
+  }
+
+  .experience-entry + .experience-entry,
+  .research-entry + .research-entry {
+    margin-top: 36px;
+    padding-top: 30px;
+  }
+
+  .project-list li {
+    font-size: 14px;
+  }
+
+  .capability-heading {
+    display: block;
+  }
+
+  .capability-heading h3 {
+    margin: 0 0 6px;
+  }
+
+  .contact-heading {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .contact-heading p > span {
+    max-width: none;
+    font-size: 13px;
+  }
+
+  .contact-links {
+    align-items: flex-start;
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  .contact-links a {
+    font-size: 15px;
+  }
+
+  .cover-note {
+    top: 8px;
+    right: 8px;
+    padding: 3px 5px;
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+
+  .project-caption {
+    gap: 8px;
+    padding: 40px 10px 12px;
+  }
+
+  .project-caption > span {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .project-caption small {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .project-caption svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .detail-visual {
+    height: 48svh;
+  }
+
+  .detail-info {
+    padding: 25px 0 10px;
+  }
+
+  .detail-info h2 {
+    font-size: 29px;
+  }
+
+  .detail-info > p {
+    max-width: none;
+    font-size: 14px;
+  }
+
+  .detail-info > p:first-child {
+    font-size: 13px;
+  }
+
+  .detail-facts {
+    margin: 24px 0;
+    font-size: 14px;
+  }
+
+  .detail-facts > div {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 14px;
+  }
+}
